@@ -27,3 +27,35 @@ var pesoPorDois = peso / 2; // NaN a Number
 
 console.log(peso);
 console.log(pesoPorDois);
+
+// A ordem importa
+// Começa por multiplicação e divisão, depois por soma e subtração.
+var total1 = 20 + 5 * 2; // 30
+var total2 = (20 + 5) * 2; // 50
+var total3 = 20 / 2 * 5; // 50
+var total4 = 10 + 10 * 2 + 20 / 2; // 40
+// Parênteses para priorizar uma expressão
+
+var soma1 = 10 + 10 + 20 + 30 * 4 / 2 + 10;
+
+console.log(soma1);
+// Operadores Aritméticos Unários
+var incremento = 5;
+console.log(incremento++);
+console.log(incremento);
+
+var incremento2 = 5;
+console.log(++incremento2); // 6
+console.log(incremento2); // 6
+
+var frase = 'Isso é um teste';
++frase; // NaN
+-frase; // NaN
+
+var idade = '28';
++idade; // 28 (número)
+-idade; // -28 (número)
+console.log(+idade + 5); // 33
+
+var possuiFaculdade = true;
+console.log(+possuiFaculdade); // 1
