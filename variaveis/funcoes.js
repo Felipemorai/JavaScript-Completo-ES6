@@ -1,3 +1,5 @@
+const btn = document.querySelector('button');
+
 function areaQuadrado(lado) {
     return lado * lado;
 }
@@ -31,21 +33,30 @@ imc(60, 1.70); // 60 e 1.70 são os argumentos
 
 function corFavorita(cor) {
     if (cor === 'Azul') {
-        console.log('Você gosta do céu.');
+        return 'Você gosta do céu.';
     } else
     if (cor === 'Verde') {
-        console.log('Você gosta de mato.');
+        return 'Você gosta de mato.';
     } else
     if (cor === 'Amarelo') {
-        console.log('Você gosta do sol.');
+        return 'Você gosta do sol.';
     } else 
     if (cor === 'Rosa') {
-        console.log('Você gosta de rosa.');
+        return 'Você gosta de rosa.';
     } if (cor === 'Preto') {
-        console.log('Você gosta da escuridão da noite.')
+        return 'Você gosta da escuridão da noite.';
     } else {
-        console.log('Você não gosta de nada.');
+        return 'Você não gosta de nada.';
     }
 }
 
-corFavorita('Preto');
+console.log(corFavorita('Preto'));
+
+// Argumentos podem ser funções
+/* Chamadas de Callback, geralmente são funções que ocorrem após algum evento */
+btn.addEventListener('click', function() {
+    console.log('Clicou');
+});
+// A função possui dois argumentos
+// Primeiro é a string 'click' que é o tipo de evento
+// Segundo é uma função anônima que é o Callback
