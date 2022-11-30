@@ -60,3 +60,11 @@ btn.addEventListener('click', function() {
 // A função possui dois argumentos
 // Primeiro é a string 'click' que é o tipo de evento
 // Segundo é uma função anônima que é o Callback
+
+function imc2(peso, altura) {
+    const imc = peso / (altura ** 2);
+    console.log(imc);
+}
+
+imc2(80, 1.80); // retorna o imc
+console.log(imc2(80, 1.80)); // retorna o imc e undefined
