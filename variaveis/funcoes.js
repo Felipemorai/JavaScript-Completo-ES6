@@ -68,3 +68,32 @@ function imc2(peso, altura) {
 
 imc2(80, 1.80); // retorna o imc
 console.log(imc2(80, 1.80)); // retorna o imc e undefined
+
+// Valores retornados
+/* Uma função pode retornar qualquer tipo de dado e até outras funções */
+function terceiraIdade(idade) {
+    if(typeof idade !== 'number') {
+        return 'Informe a sua idade!';
+    } else
+    if(idade >= 60) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function idoso(idade) {
+    console.log(typeof idade);
+
+    if(typeof idade !== 'number') {
+        return 'Por favor preenchar o número'
+    } else if (idade >= 60) {
+        console.log("É idoso!");
+        return true;
+    } else {
+        console.log("Não é idoso!");
+        return false;
+    }
+}
+
+idoso(23);
