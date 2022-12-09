@@ -97,3 +97,12 @@ var menuThis = {
 
 menuThis.halfHeight(); // 25
 // sem o this pegaria o height de fora do objeto, e retornaria 60
+
+// Protótipo e Herança
+// O objeto herda propriedades e métodos do objeto que foi utilizado para criar o mesmo.
+var menu2 = {
+    width: 800,
+}
+
+menu2.hasOwnProperty('width') // true
+menu2.hasOwnProperty('height') // false
