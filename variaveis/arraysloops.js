@@ -27,3 +27,12 @@ var frutas = ['Banana', 'Pera', 'Maçã', 'Abacaxi', 'Uva'];
 frutas.forEach(function(fruta, index, array) {
     console.log(fruta, index, array);
 });
+
+// Não se confunda com a sintaxe
+var numero = 0;
+var maximo = 50;
+for(;numero < maximo;) {
+    console.log(numero);
+    numero++;
+}
+// Não aconselho escrever da forma acima, mas funciona normalmente.
