@@ -84,3 +84,28 @@ console.log(i); // 10
     console.log(`Número ${index}`);
 }
 console.log(index); */ // i is not defined
+
+// Const
+// Mantén o escopo no bloco, impede a redeclaração e impede a modificação do valor da variável, evitando bugs no código.
+const mesAno = 'Dezembro';
+/* mesAno = 'Janeiro'; */ // erro, tentou modificar o valor
+/* const semana; */ // erro, declarou sem valor
+
+const data = {
+    dia: 28,
+    mes: 'Dezembro',
+    ano: 2022,
+}
+
+data.dia = 22; // Funciona
+/* data = 'Janeiro'; */ // erro
+
+// Let
+// Mantém o escopo no bloco, impede a redeclaração, mas permite a modificação do valor da variável.
+let ano;
+ano = 2018;
+ano++;
+console.log(ano); // 2019
+
+/* let ano = 2020 */; // erro, redeclarou a variável
+// Geralmente vamos utilizar o const.
