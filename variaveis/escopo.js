@@ -31,3 +31,56 @@ function mostrarCarro3() {
 
 mostrarCarro3(); // Meu carro é um Fusca
 console.log(carro2); // Fusca
+
+// Escopo de Bloco
+// Variáveis criadas com var, vazam o bloco. Por isso com a introdução do ES6 a melhor formade declaramos uma variável é utilizando const e let, pois estas respeitam o escopo de bloco.
+if(true) {
+    var mes = 'Dezembro';
+    console.log(mes);
+}
+console.log(mes); // Dezembro
+
+if(true) {
+    let mes2 = 'Setembro';
+    console.log(mes2);
+}
+
+// Var Vaza o Bloco
+// Mesmo com condição falsa, a variável ainda será declarada utilizando hoisting e o valor ficará como undefined.
+if(false) {
+    var car2 = 'Ferrari';
+    console.log(car2);
+}
+
+console.log(car2);
+
+// Const e Let no lugar de var
+// A partir de agora vamos utilixar apenas const e let para declaramos variáveis.
+if(true) {
+    const moto = 'Honda';
+    console.log(moto);
+}
+/* console.log(moto); */ // erro, moto is not defined
+
+// {} cria um bloco
+// Chaves {} criam um escopo de bloco, não confundir com a criação de objetos = {}
+{
+    var car3 = 'Fiat';
+    const ano = 2018;
+}
+console.log(car3); // Carro
+/* console.log(ano); */ // erro ano is not defined
+
+// For Loop
+// Ao utilizar var dentro de um for loop, que é um bloco, o valor da variável utilizada irá vazar e existir fora do loop.
+for(var i = 0; i < 10; i++) {
+    console.log(`Número ${i}`);
+}
+console.log(i); // 10
+
+// For Loop com Let
+// Com o let evitamos que o número vaze
+/* for(let index = 0; index <= 10; index++) {
+    console.log(`Número ${index}`);
+}
+console.log(index); */ // i is not defined
