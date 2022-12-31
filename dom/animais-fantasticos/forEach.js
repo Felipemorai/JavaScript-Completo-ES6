@@ -22,3 +22,41 @@ const titulosArray = Array.from(titulos);
 titulosArray.forEach(function(item) {
     console.log(item);
 });
+
+// Arrow Function
+// Sintaxe curta em relação a function expression. Basta remover a palavra chave function e adicionar a fat arrow = > após os argumentos.
+imgs.forEach((item) => {
+    console.log(item);
+});
+
+// Parâmetros e Parênteses 
+// parãmetro único não precisa de parênteses
+imgs.forEach(item => {
+    console.log(item);
+});
+
+// multiplos parãmetros precisam de parênteses
+imgs.forEach((item, index) => {
+    console.log(item, index);
+});
+
+// sem parãmetro precisa dos parênteses, mesmo vazio
+let i = 0;
+imgs.forEach(() => {
+    console.log(i++);
+});
+// É melhor utilizar os parênteses
+
+// versão curta
+imgs.forEach((item) => console.log(i++));
+
+// Return
+// É possível omitir as chaves {} para uma função que retorna uma linha.
+imgs.forEach(item =>
+    console.log(item)
+);
+
+// Ou
+imgs.forEach(item => console.log(item));
+
+// Não é permitido fechar a linha com ;
