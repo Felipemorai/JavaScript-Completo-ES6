@@ -46,3 +46,66 @@ function executarCallback(event) {
 }
 
 animaisLista.addEventListener('click', executarCallback);
+
+// event.preventDefault()
+// Previne o comportamento padrão do evento no browser. No caso de um link externo, por exemplo, irá prevenir que o link seja ativado.
+const linkExterno = document.querySelector('a[href^="https"]');
+
+function clickNoLink(event) {
+    event.preventDefault();
+    console.log(event.currentTarget.href);
+}
+
+linkExterno.addEventListener('click', clickNoLink);
+
+// this
+// A palavra chave this é uma palavra especial do javascript, que pode fazer referência a diferentes objetos dependendo do contexto. No caso de eventos, ela fará referência ao elemento em que addEventListener foi adicionado.
+const animaisTitle =document.querySelector('.animais-descricao h2');
+
+function callbackThis(event) {
+    console.log(this); // retorna a imagem
+    console.log(this.getAttribute('src'));
+}
+
+animaisTitle.addEventListener('click', callbackThis);
+// Geralmente igual ao event.currentTarget
+
+// Diferentes Eventos
+// Existem diversos eventos como click, scroll, resize, keydown, keyup, mouseenter e mais. Eventos podem ser adicionados a diferentes elementos, como o window e document também.
+const h1 = document.querySelector('h1');
+
+function callbackEvent(event) {
+    console.log(event.type, event);
+}
+
+h1.addEventListener('click', callbackEvent);
+h1.addEventListener('mouseenter', callbackEvent);
+window.addEventListener('scroll', callbackEvent);
+window.addEventListener('resize', callbackEvent);
+window.addEventListener('keydown', callbackEvent);
+
+// Keyboard
+// Você pode adicionar atalhos para facilitar a navegação no seu site, através de eventos do keyboard
+function handleKeyboard(event) {
+    if(event.key === 'a') {
+        document.body.classList.toggle('azul');
+    } else 
+    if(event.key === 'v') {
+        document.body.classList.toggle('vermelho');
+    }
+}
+
+window.addEventListener('keydown', handleKeyboard);
+
+// forEach e Eventos
+// O método addEventListeneré é adicionado à um único elemento, então é necessário um loop entre elementos de uma lista, para adicionarmos à cada um deles.
+const imgs = document.querySelectorAll('img');
+
+function imgSrc(event) {
+    const src = event.currentTarget.getAttribute('scr');
+    console.log(src);
+}
+
+imgs.forEach((img) => {
+    img.addEventListener('click', imgSrc);
+})
