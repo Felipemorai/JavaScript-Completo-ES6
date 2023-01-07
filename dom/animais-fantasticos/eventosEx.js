@@ -2,7 +2,7 @@
 // adicione a classe ativo ao item clicado e remova dos
 // demais itens caso eles possuam a mesma. Previna
 // o comportamento padrão desses links
-const linksInternos = document.querySelectorAll('a');
+const linksInternos = document.querySelectorAll('a[href^="#"]');
 
 let previousLink;
 
@@ -35,8 +35,6 @@ body.addEventListener('click', (event) => {
 // Se o usuário clicar na tecla (t), aumente todo o texto do site. 
 window.addEventListener('keypress', (event) => {
     if(event.key === 't') {
-        body.style.fontSize = "36px";
-    } else if (event.key == 'v') {
-        body.style.fontSize = "16px";
+        document.documentElement.classList.toggle('textomaior');
     }
 });
