@@ -35,3 +35,13 @@ animaisLista.previousSibling; // node acima
 animaisLista.firstChild; // primeiro node child
 animaisLista.childNodes; // todos os node child
 // Geralmente estamos atrás de um elemento e não de qualquer node em si.
+
+// Manipulando Elementos
+// É possivel mover elementos no dom com métodos de Node.
+const contato = document.querySelector('.contato');
+const titulo = contato.querySelector('.titulo');
+
+contato.appendChild(lista); // move lista para o final de contato
+contato.insertBefore(lista, titulo); // insere a lista antes de titulo
+contato.removeChild(titulo); // remove titulo de contato
+contato.replaceChild(lista, titulo); // substitui titulo por lista
