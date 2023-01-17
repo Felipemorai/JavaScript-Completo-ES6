@@ -29,3 +29,34 @@ const fusca = new Carro();
 fusca.marca = 'Fusca';
 fusca.preco = 1000;
 // Usar Pascal Case, ou seja, começar com letra maiúscula.
+
+// new Keyword
+// A palavra chave new é responsável por criar um novo onjeto baseado na função que passarmos a frente dela.
+// 1 Cria um novo objeto
+/* honda = {}; */
+
+// 2 Define o protótipo
+/* honda.prototype = Carro.prototype; */
+
+// 3 Aponta a variável this para o objeto
+/* this = honda; */
+
+// 4 Executa a função, substituindo this peloobjeto
+/* honda.marca = 'Marca';
+honda.preco = 0; */
+
+// 5 Retorna o novo objeto
+/* return honda = {
+    marca: 'Marca',
+    preco: 0,
+} */
+
+// Parâmetros e Argumentos
+// Podemos passar argumentos que serão utilizados no momento da criação do objeto.
+function Carro2(marca, preco) {
+    this.marca = marca;
+    this.preco = preco;
+}
+
+const chevrolet = new Carro2('Chevrolet', 10000);
+const citroen = new Carro2('Citroen', 8000);
