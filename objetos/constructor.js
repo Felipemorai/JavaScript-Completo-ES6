@@ -60,3 +60,32 @@ function Carro2(marca, preco) {
 
 const chevrolet = new Carro2('Chevrolet', 10000);
 const citroen = new Carro2('Citroen', 8000);
+
+// this Keyword
+// O this faz referência ao próprio objeto construído com a Constructor Function.
+function Carro3(marca, precoInicial) {
+    const taxa = 1.2;
+    const precoFinal = precoInicial * taxa;
+    this.marca = marca;
+    this.preco = precoFinal;
+    console.log(this);
+}
+
+const mcLauren = new Carro3('McLauren', 100000);
+// Variáveis dentro da Constructor estão "protegidas".
+
+// Exemplo Real
+// Quando mudamos a propriedade seletor, o objeto Dom irá passar a selecionar o novo seletor em seus métodos.
+const Dom = {
+    seletor: 'li',
+    element() {
+        return document.querySelector(this.seletor);
+    },
+    ativo() {
+        this.element().classList.add('ativo');
+    },
+}
+
+Dom.ativo(); // adiciona ativo ao li
+Dom.seletor = 'ul';
+Dom.ativo(); // adiciona ativo ao ul
