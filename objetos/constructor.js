@@ -83,9 +83,44 @@ const Dom = {
     },
     ativo() {
         this.element().classList.add('ativo');
+        return console.log('ativado');
     },
 }
 
 Dom.ativo(); // adiciona ativo ao li
 Dom.seletor = 'ul';
 Dom.ativo(); // adiciona ativo ao ul
+
+// Constructor Function Real
+// Um objeto criado com uma Constructor, não irá influenciar em outro objeto criado com a mesma Constructor.
+function DomReal() {
+    this.seletor = 'li';
+    const element = document.querySelector(this.seletor);
+    this.ativo = function() {
+        element.classList.add('ativo');
+        return console.log('ativado com sucesso');
+    };
+}
+
+const lista = new DomReal();
+lista.seletor = 'ul';
+lista.ativo();
+
+const lastLi = new DomReal();
+lastLi.seletor = 'li:last-child';
+lastLi.ativo();
+
+// Lembre-se de usar parâmetros
+function DomReal2(seletor) {
+    const element = document.querySelector(seletor);
+    this.ativo = function(classe) {
+        element.classList.add(classe);
+        return console.log('successful');
+    };
+}
+
+const lista2 = new DomReal2('ul');
+lista2.ativo('ativo');
+
+const lastLi2 = new DomReal2('li:last-child');
+lastLi2.ativo('ativo');
