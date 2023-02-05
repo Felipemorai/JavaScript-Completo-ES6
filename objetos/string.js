@@ -58,3 +58,30 @@ transacao3.slice(0, 3); // Tax
 transacao1.slice(12); // cliente
 transacao2.slice(-4); // ente
 transacao3.slice(3, 6); // ósi
+
+// str.substring(start, end)
+// Corta a string de acordo com os valores de start e end. Não funciona com valores negativos como o slice.
+const linguagem3 = 'JavaScript';
+linguagem3.substring(3,5); // aS
+linguagem3.substring(0,4); // Java
+linguagem3.substring(4); // Script
+linguagem3.substring(-3); // JavaScript
+
+// str.indexOf(search) e str.lastIndexOf(search)
+// Retorna o index da string, assim que achar o primeiro resultado ele já retorna. No caso do lastIndexOf eke retorna o último resultado.
+const instrumento = 'Guitarra';
+
+instrumento.indexOf('r'); // 5
+instrumento.lastIndexOf('r'); // 6
+instrumento.indexOf('ta'); // 3
+
+// str.padStart(n, str) e str.padEnd(n, str) e str.padEnd(n, str)
+// Aumenta o tamanho da string para o valor de n. Ou seja, uma string com 8 caracteres, se passarmos n=10, ela passará a ter 10 caracteres. O preenchimento é feito com espaços, caso não seja declarado o segundo argumento.
+const listaPrecos = ['R$ 99', 'R$ 199', 'R$ 12000'];
+
+listaPrecos.forEach((preco) => {
+    console.log(preco.padStart(10, '.'));
+});
+
+listaPrecos[0].padStart(10, '.'); // .....R$ 99
+listaPrecos[0].padEnd(10, '.'); // R$ 99.....
