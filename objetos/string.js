@@ -111,3 +111,13 @@ const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
 const htmlArray = htmlText.split('div');
 const htmlNovo = htmlArray.join('section');
 // join é um método de Array
+
+// str.toLowerCase() e str.toUpperCase()
+// Retorna a string em letras maiúsculas ou minúsculas. Bom para verificarmos input de usuários.
+const sexo1 = 'Feminino';
+const sexo2 = 'feminino';
+const sexo3 = 'FEMININO';
+
+(sexo1.toLowerCase() === 'feminino'); // true
+(sexo2.toLowerCase() === 'feminino'); // true
+(sexo3.toLowerCase() === 'feminino'); // true
