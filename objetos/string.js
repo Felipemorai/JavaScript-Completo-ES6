@@ -121,3 +121,11 @@ const sexo3 = 'FEMININO';
 (sexo1.toLowerCase() === 'feminino'); // true
 (sexo2.toLowerCase() === 'feminino'); // true
 (sexo3.toLowerCase() === 'feminino'); // true
+
+// str.trim(), str.trimStart(), str.trimEnd()
+// Remove espaço em branco do início ou final de um string.
+const valor = '  R$ 23.00  ';
+valor.trim(); // 'R$ 23.00'
+valor.trimStart(); // "R$ 23.00  "
+valor.trimEnd(); // '  R$ 23.00'
+
