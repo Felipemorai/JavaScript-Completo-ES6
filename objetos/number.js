@@ -44,3 +44,38 @@ preco3.toString(10); // '2.99'
 const preco4 = 59.49;
 preco4.toLocaleString('en-US', {style: 'currency', currency: 'USD'}); // $59.49
 preco4.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}); // R$59.49
+
+// Math
+// É um Objeto nativo que possui propriedades e métodos de expressôes matemáticas comuns.
+Math.PI // 3.14159
+Math.E // 2.718
+Math.LN10 // 2.303
+
+// Math.abs(), Math.ceil(), Math.floor e Math.round()
+// abs() retorna sempre uma integral e floor para baixo. round() arredonda para o número integral mais próximo.
+Math.abs(-5.5); // 5.5
+Math.ceil(4.8334); // 5
+Math.ceil(4.3); // 5
+Math.floor(4.8334); // 4
+Math.floor(4.3); // 4
+Math.round(4.8334); // 5
+Math.round(4.3); // 4
+
+// Math.max(), Math.min() e Math.random();
+// max() retorna o maior número de uma lista de argumentos, min() o menor número e random() um número aleatório entre 0 e 1.
+Math.max(5,3,10,42,2); // 42
+Math.min(5,3,10,42,2); // 2
+
+Math.random(); // 0.XXX
+Math.floor(Math.random() * 100); // entre 0 e 100
+Math.floor(Math.random() * 500); // entre 0 e 500
+
+// Número random entre 72 e 32
+Math.floor(Math.random() * (72 - 32 + 1)) + 32;
+/* Math.floor(Math.random() * (max - min + 1)) + min; */
+
+Math.random() * 100; // 0 até 100
+
+const aleatório = Math.floor(Math.random() * 100);
+
+console.log(aleatório);
